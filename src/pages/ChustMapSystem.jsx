@@ -96,30 +96,31 @@ const ChustMapSystem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Header with Green Theme like attachment */}
       <div className="bg-gradient-to-r from-green-600 to-green-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <MdLocationOn className="w-6 h-6" />
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-3 md:py-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0">
+            <div className="flex items-center space-x-3">
+              <div className="w-9 h-9 md:w-10 md:h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <MdLocationOn className="w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <div>
-                <h1 className="text-lg md:text-xl font-bold">
+              <div className="min-w-0">
+                <h1 className="text-base md:text-xl font-bold truncate">
                   Chust aqlli shahar
                 </h1>
-                <p className="text-green-100 text-xs md:text-sm">
+                <p className="text-green-100 text-xs leading-tight">
                   Tozalanmagan/tozalangan chiqindi yig'ish shoxobchalari
                 </p>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="text-right text-xs md:text-sm">
-                <div>02.07.2025</div>
-                <div>15:24:17</div>
+            <div className="flex items-center space-x-2 md:space-x-4 text-xs">
+              <div className="text-right">
+                <div className="font-medium">02.07.2025</div>
+                <div className="text-green-100">15:24:17</div>
               </div>
-              <div className="text-xs md:text-sm">
+              <div className="hidden sm:block w-px h-8 bg-green-400/30"></div>
+              <div>
                 <div className="font-medium">Texnik ishlar</div>
                 <div className="text-green-100">Dashboard</div>
               </div>
@@ -128,7 +129,7 @@ const ChustMapSystem = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-3 md:py-6">
         {/* Control Panel */}
         <div className="mb-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 mb-4">
@@ -208,7 +209,7 @@ const ChustMapSystem = () => {
         </div>
 
         {/* Main Content Area */}
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
           {/* Left Panel - Controls */}
           <div className="xl:col-span-1 order-2 xl:order-1">
             <Card className="bg-white border-gray-200 mb-4">
