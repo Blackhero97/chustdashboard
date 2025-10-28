@@ -120,8 +120,8 @@ const ChustMapSystem = () => {
                 <div>15:24:17</div>
               </div>
               <div className="text-xs md:text-sm">
-                <div>A1Tech</div>
-                <div>Super Admin</div>
+                <div className="font-medium">Texnik ishlar</div>
+                <div className="text-green-100">Dashboard</div>
               </div>
             </div>
           </div>
@@ -235,16 +235,25 @@ const ChustMapSystem = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span>Vaqt oralig'i</span>
-                    <span className="text-blue-600 flex items-center space-x-1">
-                      <MdAccessTime className="w-4 h-4" />
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Vaqt oralig'i
+                  </label>
+                  <div className="space-y-1.5 text-xs text-blue-600">
+                    <div className="flex items-center space-x-1.5">
+                      <MdAccessTime className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span className="font-medium">Boshlanish:</span>
                       <span>06:06</span>
-                      <MdTimer className="w-4 h-4" />
+                    </div>
+                    <div className="flex items-center space-x-1.5">
+                      <MdTimer className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span className="font-medium">Tugash:</span>
                       <span>23:59</span>
-                      <MdAccessTime className="w-4 h-4" />
+                    </div>
+                    <div className="flex items-center space-x-1.5">
+                      <MdAccessTime className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span className="font-medium">Status:</span>
                       <span>Qacha</span>
-                    </span>
+                    </div>
                   </div>
                 </div>
 

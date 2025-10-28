@@ -32,6 +32,8 @@ import { getCurrentTime } from "../utils";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const { t, currentLanguage, changeLanguage } = useLanguage();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const location = useLocation();
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
@@ -42,6 +44,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleLogout = () => {
+    logout();
+    toast.success("Tizimdan muvaffaqiyatli chiqdingiz");
+    navigate("/login");
+  };
 
   const navigationItems = [
     {
@@ -185,9 +193,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-slate-200">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <MdLocationCity className="text-white text-xl" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Chust Smart City Logo"
+              className="w-10 h-10 object-contain"
+            />
             <div>
               <h1 className="text-lg font-bold text-blue-600">
                 Chust aqlli shahar
@@ -207,19 +217,28 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         {/* User info */}
         <div className="p-4 border-b border-slate-200">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <MdPerson className="w-4 h-4 text-white" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-slate-900">AiTech</p>
-                <p className="text-xs text-slate-600">Super Admin</p>
-              </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <MdSettings
+                className="w-4 h-4 text-white animate-spin"
+                style={{ animationDuration: "3s" }}
+              />
             </div>
-            <div className="text-right">
-              <p className="text-xs text-slate-600">02.07.2025</p>
-              <p className="text-xs text-slate-700">{currentTime}</p>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-medium text-orange-700 leading-tight">
+                Texnik ishlar olib borilmoqda
+              </p>
+              <p className="text-xs text-slate-500">Dashboard</p>
+            </div>
+          </div>
+          <div className="mt-3 pt-3 border-t border-slate-200">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-slate-600">Sana:</span>
+              <span className="font-medium text-slate-800">02.07.2025</span>
+            </div>
+            <div className="flex items-center justify-between text-xs mt-1">
+              <span className="text-slate-600">Vaqt:</span>
+              <span className="font-medium text-slate-800">{currentTime}</span>
             </div>
           </div>
         </div>
@@ -292,7 +311,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         {/* Language switcher */}
         <div className="p-4 border-t border-slate-200">
-          <div className="flex bg-blue-50 rounded-lg p-1">
+          <div className="flex bg-blue-50 rounded-lg p-1 mb-4">
             <button
               onClick={() => changeLanguage("uz")}
               className={`flex-1 px-3 py-2 text-sm font-medium rounded transition-colors ${
@@ -312,6 +331,27 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               }`}
             >
               Русский
+            </button>
+          </div>
+
+          {/* User Info & Logout */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-3">
+            <div className="flex items-center space-x-3 mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center">
+                <MdPerson className="text-white text-xl" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-gray-800 truncate">
+                  Admin: Hasanboy
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={handleLogout}
+              className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-sm hover:shadow-md"
+            >
+              <MdLogout className="text-lg" />
+              <span className="text-sm font-medium">Chiqish</span>
             </button>
           </div>
         </div>

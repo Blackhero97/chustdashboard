@@ -15,9 +15,11 @@ const TopBar = ({ onToggleSidebar }) => {
           </button>
 
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-              <MdLocationCity className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Chust Smart City Logo"
+              className="w-8 h-8 object-contain"
+            />
             <div>
               <h1 className="text-lg font-bold">Chust aqlli shahar</h1>
               <p className="text-xs text-green-100">Modular</p>
@@ -30,9 +32,6 @@ const TopBar = ({ onToggleSidebar }) => {
             <span>02.07.2025</span>
             <span className="w-1 h-1 bg-green-200 rounded-full"></span>
             <span>AiTech</span>
-            <span className="px-2 py-1 bg-green-500 rounded text-xs">
-              Super Admin
-            </span>
           </div>
 
           <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
