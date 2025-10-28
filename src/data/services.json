@@ -1,0 +1,94 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": {
+        "uz": "Transport monitoringi",
+        "ru": "Мониторинг транспорта"
+      },
+      "description": {
+        "uz": "Shahar transport tizimini real vaqt rejimida kuzatish va boshqarish",
+        "ru": "Мониторинг и управление городской транспортной системой в реальном времени"
+      },
+      "icon": "🚌",
+      "status": "active",
+      "stats": {
+        "vehicles": 324,
+        "routes": 13,
+        "coverage": "85%"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "uz": "Yoritish tizimi",
+        "ru": "Система освещения"
+      },
+      "description": {
+        "uz": "Aqlli LED yoritish tizimi va energiya tejash dasturi",
+        "ru": "Умная система LED освещения и программа энергосбережения"
+      },
+      "icon": "💡",
+      "status": "active",
+      "stats": {
+        "lights": 8547,
+        "energySaved": "32%",
+        "coverage": "92%"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "uz": "Xavfsizlik kameralar tarmog'i",
+        "ru": "Сеть камер безопасности"
+      },
+      "description": {
+        "uz": "AI texnologiyali xavfsizlik kameralar va monitoring tizimi",
+        "ru": "Камеры безопасности с AI технологиями и система мониторинга"
+      },
+      "icon": "MdSecurity",
+      "status": "active",
+      "stats": {
+        "cameras": 81,
+        "coverage": "78%",
+        "incidents": 8
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "uz": "Kommunal xizmatlarni nazorat qilish",
+        "ru": "Контроль коммунальных услуг"
+      },
+      "description": {
+        "uz": "Suv, gaz, elektr energiya va issiqlik ta'minoti nazorati",
+        "ru": "Контроль водоснабжения, газа, электроэнергии и теплоснабжения"
+      },
+      "icon": "🔧",
+      "status": "maintenance",
+      "stats": {
+        "waterLines": 147,
+        "gasLines": 55,
+        "powerLines": 64
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "uz": "Aholi uchun onlayn murojaat xizmati",
+        "ru": "Онлайн служба обращений граждан"
+      },
+      "description": {
+        "uz": "Fuqarolar murojaatlari va shikoyatlarini onlayn qayta ishlash tizimi",
+        "ru": "Система онлайн обработки обращений и жалоб граждан"
+      },
+      "icon": "MdPhone",
+      "status": "active",
+      "stats": {
+        "requests": 3994,
+        "processed": 3965,
+        "satisfaction": "94%"
+      }
+    }
+  ]
+}
