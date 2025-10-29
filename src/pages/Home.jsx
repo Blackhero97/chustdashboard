@@ -258,7 +258,7 @@ const Home = () => {
         </motion.div>
 
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
           {filteredStats.length === 0 && searchTerm ? (
             <div className="col-span-full text-center py-12">
               <div className="text-slate-400 text-6xl mb-4">
@@ -279,90 +279,69 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card
-                  className="bg-white/80 backdrop-blur-sm border-slate-200 hover:bg-white/90 transition-all duration-300 shadow-lg cursor-pointer hover:shadow-xl hover:scale-105 group relative"
+                <div
+                  className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 group border border-gray-100"
                   onClick={() => handleCardClick(stat)}
-                  title={`${stat.title} - ${getStatusText(stat.status)}: ${
-                    stat.activeValue
-                  } faol, ${stat.totalValue} jami`}
                 >
-                  {/* Tooltip */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full bg-slate-800 text-white text-xs rounded-lg px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                    {stat.title === "Ichimlik suvi" &&
-                      "Bosim pasayishi 2 ta hududda kuzatilmoqda. 3 ta xodim joyda."}
-                    {stat.title === "Issiqlik manbai" &&
-                      "35 ta qozonxona faol. Harorat me'yorida."}
-                    {stat.title === "Gaz" &&
-                      "Gaz sizishi 1 ta hududda. Avariya guruhi safarbarda."}
-                    {stat.title === "Elektroset" &&
-                      "142 ta zona onlayn. 15 ta zona oflayn."}
-                    {stat.title.includes("XTB") &&
-                      "63 ta ta'lim muassasasi. Internet normal."}
-                    {stat.title.includes("Obodon") &&
-                      "837 ta ishchi faol. Tozalash rejalangan."}
-                    {stat.title.includes("Favqulodda") &&
-                      "Hozirda favqulodda vaziyat yo'q."}
-                    {stat.title.includes("Yo'llardan") &&
-                      "7 ta yo'l uchastkasi nazorat ostida."}
-                    {stat.title.includes("Toza hudud") &&
-                      "441 ta hudud tozalangan. 66 ta xodim ishlayapti."}
-                    {stat.title.includes("Yolkalam") &&
-                      "6 ta xodim ko'kalamzorlashtirish ishlarida."}
-                    {stat.title.includes("Transport") &&
-                      "324 ta transport vositasi faol."}
-                    {stat.title === "BSK" && "103 ta tibbiy xodim navbatda."}
-                    {stat.title.includes("SSB") &&
-                      "17 ta tibbiy muassasa faol."}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-slate-800 rotate-45"></div>
-                  </div>
-                  <div className="flex items-start justify-between mb-4">
+                  {/* Icon */}
+                  <div className="flex items-center justify-between mb-3">
                     <div
                       className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center`}
                     >
                       <stat.icon className="w-6 h-6 text-white" />
                     </div>
                     <div
-                      className={`text-sm font-semibold ${getStatusColor(
-                        stat.status
-                      )}`}
+                      className={`text-xs font-medium px-2 py-1 rounded ${
+                        stat.status === "active"
+                          ? "bg-green-100 text-green-600"
+                          : stat.status === "maintenance"
+                          ? "bg-yellow-100 text-yellow-600"
+                          : "bg-red-100 text-red-600"
+                      }`}
                     >
                       {getStatusText(stat.status)}
                     </div>
-                  </div>{" "}
-                  <h3 className="text-slate-900 font-semibold text-lg mb-4 line-clamp-2">
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-gray-900 font-semibold text-base mb-6 leading-tight">
                     {stat.title}
                   </h3>
+
+                  {/* Stats */}
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-slate-600 text-sm">Faol:</span>
-                      <span className="text-green-600 font-bold text-xl">
+                      <span className="text-gray-500 text-sm">Faol:</span>
+                      <span className="text-green-500 font-bold text-2xl">
                         {stat.activeValue}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-slate-600 text-sm">Jami:</span>
-                      <span className="text-slate-700 font-semibold">
+                      <span className="text-gray-500 text-sm">Jami:</span>
+                      <span className="text-gray-700 font-semibold text-lg">
                         {stat.totalValue}
                       </span>
                     </div>
                   </div>
-                  {/* Progress bar if there's a meaningful ratio */}
-                  {stat.totalValue > 0 && (
-                    <div className="mt-4">
-                      <div className="w-full bg-slate-200 rounded-full h-2">
-                        <div
-                          className={`bg-gradient-to-r ${stat.color} h-2 rounded-full transition-all duration-500`}
-                          style={{
-                            width: `${Math.min(
-                              (stat.activeValue / stat.totalValue) * 100,
-                              100
-                            )}%`,
-                          }}
-                        />
-                      </div>
+
+                  {/* Progress bar */}
+                  <div className="mt-4">
+                    <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div
+                        className={`bg-gradient-to-r ${stat.color} h-1 rounded-full transition-all duration-500`}
+                        style={{
+                          width:
+                            stat.totalValue > 0
+                              ? `${Math.min(
+                                  (stat.activeValue / stat.totalValue) * 100,
+                                  100
+                                )}%`
+                              : "100%",
+                        }}
+                      />
                     </div>
-                  )}
-                </Card>
+                  </div>
+                </div>
               </motion.div>
             ))
           )}
