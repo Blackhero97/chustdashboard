@@ -1,0 +1,76 @@
+{
+  "cityInfo": {
+    "name": {
+      "uz": "Chust",
+      "ru": "Чуст"
+    },
+    "region": {
+      "uz": "Namangan viloyati",
+      "ru": "Наманганская область"
+    },
+    "population": 164653,
+    "area": "58.7 km²",
+    "coordinates": {
+      "lat": 41.0019,
+      "lng": 71.2358
+    },
+    "weather": {
+      "temperature": 24,
+      "condition": "sunny",
+      "humidity": 45,
+      "windSpeed": 12
+    }
+  },
+  "statistics": {
+    "households": {
+      "total": 43253,
+      "connected": 20979,
+      "withMultipleFloors": 22274
+    },
+    "utilities": {
+      "water": {
+        "total": 147,
+        "active": 28,
+        "inactive": 119
+      },
+      "gas": {
+        "total": 55,
+        "active": 31,
+        "inactive": 24
+      },
+      "electricity": {
+        "total": 64,
+        "active": 157,
+        "inactive": 54
+      },
+      "heating": {
+        "total": 10,
+        "active": 0,
+        "inactive": 10
+      }
+    },
+    "transport": {
+      "totalRoutes": 13,
+      "activeVehicles": 324,
+      "completedTrips": 1
+    },
+    "security": {
+      "cameras": 81,
+      "incidents": 8,
+      "resolved": 73
+    },
+    "demographics": {
+      "ageGroups": [
+        { "range": "0-2 yosh", "male": 6845, "female": 3421 },
+        { "range": "3-6 yosh", "male": 10234, "female": 4876 },
+        { "range": "7-13 yosh", "male": 15432, "female": 7234 },
+        { "range": "14-17 yosh", "male": 10876, "female": 5123 },
+        { "range": "18-35 yosh", "male": 27654, "female": 13876 },
+        { "range": "36-45 yosh", "male": 38765, "female": 18234 },
+        { "range": "46-60 yosh", "male": 27432, "female": 12876 },
+        { "range": "61-75 yosh", "male": 13654, "female": 6432 },
+        { "range": "76+ yosh", "male": 5876, "female": 3124 }
+      ]
+    }
+  }
+}

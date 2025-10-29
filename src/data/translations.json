@@ -1,0 +1,160 @@
+{
+  "translations": {
+    "uz": {
+      "nav": {
+        "home": "Bosh sahifa",
+        "about": "Loyiha haqida",
+        "services": "Xizmatlar",
+        "statistics": "Statistika",
+        "mobileApp": "Mobil ilova",
+        "contact": "Aloqa",
+        "maintenance": "Ta'mirlash"
+      },
+      "common": {
+        "loading": "Yuklanmoqda...",
+        "error": "Xatolik yuz berdi",
+        "retry": "Qaytadan urinish",
+        "viewDetails": "Batafsil ko'rish",
+        "close": "Yopish",
+        "submit": "Yuborish",
+        "cancel": "Bekor qilish",
+        "save": "Saqlash",
+        "edit": "Tahrirlash",
+        "delete": "O'chirish",
+        "search": "Qidirish"
+      },
+      "home": {
+        "title": "Chust Aqlli Shahar Tizimi",
+        "subtitle": "Raqamli O'zbekiston 2030",
+        "description": "Zamonaviy texnologiyalar yordamida shahar hayotini boshqarish",
+        "temperature": "Havo harorati",
+        "time": "Hozirgi vaqt",
+        "quickStats": "Tezkor statistika",
+        "totalPopulation": "Umumiy aholi soni",
+        "connectedHomes": "Ulangan uylar",
+        "activeServices": "Faol xizmatlar"
+      },
+      "about": {
+        "title": "Aqlli shahar haqida",
+        "whatIsSmartCity": "Aqlli shahar nima?",
+        "smartCityDescription": "Aqlli shahar - bu axborot va kommunikatsiya texnologiyalaridan (AKT) foydalanib, shahar xizmatlarining samaradorligini oshirish, resurslarni tejash va fuqarolar bilan muloqotni yaxshilash maqsadida yaratilgan innovatsion shahar boshqaruv tizimi.",
+        "keyDirections": "Asosiy yo'nalishlar",
+        "transport": "Transport",
+        "energy": "Energiya",
+        "security": "Xavfsizlik",
+        "ecology": "Ekologiya",
+        "management": "Boshqaruv"
+      },
+      "services": {
+        "title": "Shahar xizmatları",
+        "allServices": "Barcha xizmatlar",
+        "activeServices": "Faol xizmatlar",
+        "maintenanceServices": "Ta'mirlashdagi xizmatlar"
+      },
+      "statistics": {
+        "title": "Shahar statistikasi",
+        "demographics": "Demografik ko'rsatkichlar",
+        "utilities": "Kommunal xizmatlar",
+        "transport": "Transport",
+        "security": "Xavfsizlik",
+        "households": "Uy xo'jaliklari",
+        "population": "Aholi",
+        "male": "Erkak",
+        "female": "Ayol"
+      },
+      "contact": {
+        "title": "Aloqa",
+        "address": "Manzil",
+        "phone": "Telefon",
+        "email": "Elektron pochta",
+        "feedback": "Fikr-mulohaza yuborish",
+        "name": "Ism",
+        "message": "Xabar",
+        "sendMessage": "Xabar yuborish"
+      },
+      "maintenance": {
+        "title": "Ta'mirlash ishlari",
+        "message": "Saytda ta'mirlash ishlari olib borilmoqda, kamchiliklar uchun uzr so'raymiz",
+        "backHome": "Bosh sahifaga qaytish"
+      }
+    },
+    "ru": {
+      "nav": {
+        "home": "Главная",
+        "about": "О проекте",
+        "services": "Услуги",
+        "statistics": "Статистика",
+        "mobileApp": "Мобильное приложение",
+        "contact": "Контакты",
+        "maintenance": "Обслуживание"
+      },
+      "common": {
+        "loading": "Загрузка...",
+        "error": "Произошла ошибка",
+        "retry": "Повторить",
+        "viewDetails": "Подробнее",
+        "close": "Закрыть",
+        "submit": "Отправить",
+        "cancel": "Отмена",
+        "save": "Сохранить",
+        "edit": "Редактировать",
+        "delete": "Удалить",
+        "search": "Поиск"
+      },
+      "home": {
+        "title": "Система умного города Чуст",
+        "subtitle": "Цифровой Узбекистан 2030",
+        "description": "Управление городской жизнью с помощью современных технологий",
+        "temperature": "Температура воздуха",
+        "time": "Текущее время",
+        "quickStats": "Быстрая статистика",
+        "totalPopulation": "Общая численность населения",
+        "connectedHomes": "Подключенные дома",
+        "activeServices": "Активные услуги"
+      },
+      "about": {
+        "title": "Об умном городе",
+        "whatIsSmartCity": "Что такое умный город?",
+        "smartCityDescription": "Умный город - это инновационная система управления городом, созданная с использованием информационно-коммуникационных технологий (ИКТ) для повышения эффективности городских услуг, экономии ресурсов и улучшения взаимодействия с гражданами.",
+        "keyDirections": "Основные направления",
+        "transport": "Транспорт",
+        "energy": "Энергетика",
+        "security": "Безопасность",
+        "ecology": "Экология",
+        "management": "Управление"
+      },
+      "services": {
+        "title": "Городские услуги",
+        "allServices": "Все услуги",
+        "activeServices": "Активные услуги",
+        "maintenanceServices": "Услуги на обслуживании"
+      },
+      "statistics": {
+        "title": "Статистика города",
+        "demographics": "Демографические показатели",
+        "utilities": "Коммунальные услуги",
+        "transport": "Транспорт",
+        "security": "Безопасность",
+        "households": "Домохозяйства",
+        "population": "Население",
+        "male": "Мужчины",
+        "female": "Женщины"
+      },
+      "contact": {
+        "title": "Контакты",
+        "address": "Адрес",
+        "phone": "Телефон",
+        "email": "Электронная почта",
+        "feedback": "Отправить отзыв",
+        "name": "Имя",
+        "message": "Сообщение",
+        "sendMessage": "Отправить сообщение"
+      },
+      "maintenance": {
+        "title": "Технические работы",
+        "message": "На сайте ведутся технические работы, приносим извинения за неудобства",
+        "backHome": "Вернуться на главную"
+      }
+    }
+  }
+}
