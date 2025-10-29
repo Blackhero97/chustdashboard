@@ -209,40 +209,14 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 relative">
-      {/* Background with animated dots/particles similar to attachment */}
+      {/* Simple Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
-        {/* Animated background elements */}
-        {Array.from({ length: 50 }, (_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-blue-400 rounded-full"
-            initial={{
-              x: Math.random() * 1000,
-              y: Math.random() * 800,
-              opacity: Math.random() * 0.5,
-            }}
-            animate={{
-              y: [null, Math.random() * 800],
-              opacity: [null, Math.random() * 0.8, 0],
-            }}
-            transition={{
-              duration: Math.random() * 20 + 10,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
       </div>
 
       <div className="relative z-10 p-6">
         {/* Search Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
+        <div className="mb-8">
           <div className="max-w-md mx-auto relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <MdSearch className="h-5 w-5 text-slate-400" />
@@ -255,7 +229,7 @@ const Home = () => {
               className="block w-full pl-10 pr-3 py-3 border border-slate-300 rounded-lg leading-5 bg-white placeholder-slate-500 focus:outline-none focus:placeholder-slate-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 text-slate-900"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
@@ -273,12 +247,7 @@ const Home = () => {
             </div>
           ) : (
             filteredStats.map((stat, index) => (
-              <motion.div
-                key={stat.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <div key={stat.id}>
                 <div
                   className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 group border border-gray-100"
                   onClick={() => handleCardClick(stat)}
@@ -342,18 +311,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))
           )}
         </div>
 
         {/* Additional Summary Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white border-blue-400 shadow-lg">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">
@@ -387,7 +351,7 @@ const Home = () => {
               <div className="text-green-100">Joriy vaqt</div>
             </div>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

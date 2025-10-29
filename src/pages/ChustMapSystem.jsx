@@ -96,9 +96,14 @@ const ChustMapSystem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 overflow-x-hidden">
-      {/* Header with Green Theme like attachment */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white">
+    <div className="min-h-screen bg-slate-50 overflow-x-hidden relative">
+      {/* Simple Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
+      </div>
+      <div className="relative z-10">
+      {/* Header with consistent theme */}
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-3 md:py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0">
             <div className="flex items-center space-x-3">
@@ -368,6 +373,7 @@ const ChustMapSystem = () => {
             </Card>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

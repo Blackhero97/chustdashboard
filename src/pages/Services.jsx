@@ -64,9 +64,15 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 relative">
+      {/* Simple Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
+      </div>
+      
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -257,6 +263,7 @@ const Services = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

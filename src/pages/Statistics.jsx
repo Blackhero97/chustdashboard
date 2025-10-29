@@ -85,9 +85,15 @@ const Statistics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 relative">
+      {/* Simple Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
+      </div>
+      
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div>
@@ -334,6 +340,7 @@ const Statistics = () => {
             </Card>
           </motion.div>
         </div>
+      </div>
       </div>
     </div>
   );
