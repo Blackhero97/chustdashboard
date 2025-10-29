@@ -346,40 +346,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
         {/* Navigation */}
         <div className="flex-1 overflow-y-auto">
-          <nav className="p-2 space-y-1">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.path;
-
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={(e) => handleNavClick(item.path, e)}
-                  className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm transition-colors ${
-                    isActive
-                      ? "bg-blue-600 text-white shadow-sm"
-                      : "text-slate-700 hover:text-slate-900 hover:bg-blue-50"
-                  }`}
-                >
-                  <Icon className="w-5 h-5 flex-shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium truncate">{item.label}</p>
-                    <p
-                      className={`text-xs truncate ${
-                        isActive ? "text-blue-100" : "text-slate-500"
-                      }`}
-                    >
-                      {item.subLabel}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
-          </nav>
-
           {/* Dashboard Modules Section */}
-          <div className="mt-6 px-2">
+          <div className="mt-4 px-2">
             {/* Modules Dropdown Header */}
             <button
               onClick={() => setModulesDropdownOpen(!modulesDropdownOpen)}
@@ -446,6 +414,38 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               )}
             </AnimatePresence>
           </div>
+
+          <nav className="p-2 space-y-1 mt-6">
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = location.pathname === item.path;
+
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={(e) => handleNavClick(item.path, e)}
+                  className={`flex items-center space-x-3 px-3 py-3 rounded-lg text-sm transition-colors ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-sm"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-blue-50"
+                  }`}
+                >
+                  <Icon className="w-5 h-5 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium truncate">{item.label}</p>
+                    <p
+                      className={`text-xs truncate ${
+                        isActive ? "text-blue-100" : "text-slate-500"
+                      }`}
+                    >
+                      {item.subLabel}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
+          </nav>
 
           {/* Bottom menu */}
           <div className="mt-8 border-t border-slate-200 pt-4">
